@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "0e8001ad-62ef-445a-9a37-b64aa766f8bb",
+		"name": "zoo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"78"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 64,\r\n        \"name\": \"Морковь\",\r\n        \"amountOfProduct\": 44,\r\n        \"unitType\": \"QUANTITY\",\r\n        \"productType\": \"VEGETABLE\"\r\n }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080//product/remove/35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"product",
+								"remove",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductByIds",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/remove-by-ids?ids=155,156",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"remove-by-ids"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "155,156"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateConsumptionRate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/update-product-count?amountOfProduct=111&productId=300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"update-product-count"
+							],
+							"query": [
+								{
+									"key": "amountOfProduct",
+									"value": "111"
+								},
+								{
+									"key": "productId",
+									"value": "300"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeAllProducts",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080//product/remove-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"product",
+								"remove-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "animalfood",
+			"item": [
+				{
+					"name": "Get-by-week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animalfood/by-weeks?startDate=11-04-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animalfood",
+								"by-weeks"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "11-04-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product-ration",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animalfood/update-product-ration?animalId=200&productRate=777",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animalfood",
+								"update-product-ration"
+							],
+							"query": [
+								{
+									"key": "animalId",
+									"value": "200"
+								},
+								{
+									"key": "productRate",
+									"value": "777"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProductToAnimal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"animalName\": \"Тигр\",\r\n    \"productName\": \"Яблоко\",\r\n    \"productCount\": 23\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/animalfood/addProduct-to-animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animalfood",
+								"addProduct-to-animal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProductsToAnimal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"animalName\": \"Тигр\",\r\n        \"productName\": \"Яблоко\",\r\n        \"productCount\": 23\r\n    },\r\n    {\r\n        \"animalName\": \"Лошадь\",\r\n        \"productName\": \"Мясо\",\r\n        \"productCount\": 2\r\n    },\r\n    {\r\n        \"animalName\": \"Единорог\",\r\n        \"productName\": \"Мясо\",\r\n        \"productCount\": 2\r\n    },\r\n    {\r\n        \"animalName\": \"Лошадь\",\r\n        \"productName\": \"Торт\",\r\n        \"productCount\": 2\r\n    }\r\n]"
+						},
+						"url": {
+							"raw": "http://localhost:8080/animalfood/addProducts-to-animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animalfood",
+								"addProducts-to-animal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "animals",
+			"item": [
+				{
+					"name": "addAnimal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 52,\r\n        \"name\": \"Медведь\",\r\n        \"type\": \"MAMMAL\",\r\n        \"isPredator\": true\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/animal/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animal",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAnimals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animal/get-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animal",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAnimalById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animal/get/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animal",
+								"get",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeAllAnimals",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animal/remove-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animal",
+								"remove-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeAnimalById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animal/remove/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animal",
+								"remove",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAnimalsByIds",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/animal/remove-by-ids?ids=155,156",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"animal",
+								"remove-by-ids"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "155,156"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
