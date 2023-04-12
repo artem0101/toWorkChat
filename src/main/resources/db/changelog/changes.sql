@@ -1,5 +1,14 @@
 CREATE SCHEMA IF NOT EXISTS zoo;
 
+DROP TABLE IF EXISTS zoo.animal_food;
+DROP TABLE IF EXISTS zoo.animal;
+DROP TABLE IF EXISTS zoo.product;
+
+DROP SEQUENCE IF EXISTS zoo.animal_food_seq;
+DROP SEQUENCE IF EXISTS zoo.animal_seq;
+DROP SEQUENCE IF EXISTS zoo.product_seq;
+
+
 CREATE TABLE zoo.product (
     id           		BIGINT PRIMARY KEY,
     name         		VARCHAR(30) NOT NULL,
@@ -42,3 +51,4 @@ CREATE SEQUENCE zoo.animal_food_seq
 START 1
 INCREMENT 1
 OWNED BY zoo.animal_food.id;
+

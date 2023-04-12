@@ -1,4 +1,6 @@
 spring:
+  liquibase:
+    change-log: classpath:db/changelog/changes.sql
   datasource:
     url: jdbc:postgresql://localhost:5432/zoo?currentSchema=zoo
     username: postgres
